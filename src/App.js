@@ -2,17 +2,15 @@ import React from 'react';
 import './App.css';
 import { Router } from '@reach/router';
 import Home from './components/Home';
-import Hello from './components/Hello';
 import WordColorColor from './components/WordColorColor';
-import Number from './components/Number';
+import NumOrWord from './components/NumOrWord';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Home path='/home'></Home>
-        <Number path='/4'></Number>
-        <Hello path='/hello'></Hello>
+        <NumOrWord path='/:id'></NumOrWord>
         <WordColorColor path='/hello/blue/red'></WordColorColor>
       </Router>
     </div>
