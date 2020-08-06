@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Router } from '@reach/router';
+import { Router, Redirect } from '@reach/router';
 import Home from './components/Home';
 import WordColorColor from './components/WordColorColor';
 import NumOrWord from './components/NumOrWord';
@@ -9,9 +9,11 @@ function App() {
   return (
     <div className="App">
       <Router>
+        {/* noThrow prevents error from being thrown by react */}
+        <Redirect noThrow exact from="/" to="/home"></Redirect>
         <Home path='/home'></Home>
         <NumOrWord path='/:id'></NumOrWord>
-        <WordColorColor path='/hello/blue/red'></WordColorColor>
+        <WordColorColor path='/:word/:textColor/:backgroundColor'></WordColorColor>
       </Router>
     </div>
   );

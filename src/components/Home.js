@@ -10,7 +10,7 @@ const Home = (props) => {
             <br/>
             <Link to='/hello'>Visit localhost:3000/hello</Link>
             <br/>
-            <Link to='hello/blue/red'>Visit localhost:3000/hello/blue/red</Link>
+            <Link to='/hello/blue/red'>Visit localhost:3000/hello/blue/red</Link>
         </div>
     );
 }
